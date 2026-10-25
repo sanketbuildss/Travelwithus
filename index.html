@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111b">
+  <meta name="description" content="Discover Rajasthan through a cinematic, interactive journey of forts, deserts, lakes and royal heritage.">
+  <title>RAJASTHAN — A Royal Journey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Rajasthan home">
+      <span class="brand-mark"><i data-lucide="sun"></i></span>
+      <span><b>RAJASTHAN</b><small>A ROYAL JOURNEY</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="active" href="#top">Home</a><a href="#destinations">Destinations</a><a href="#experiences">Experiences</a><a href="#story">Our Story</a>
+    </nav>
+    <div class="header-actions">
+      <a class="nav-cta" href="#planner">Plan your trip <i data-lucide="arrow-up-right"></i></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i data-lucide="menu"></i></button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#destinations">Destinations</a><a href="#experiences">Experiences</a><a href="#story">Our Story</a><a href="#planner">Plan your trip</a>
+  </div>
+
+  <main>
+    <section class="hero" aria-label="Rajasthan introduction">
+      <div class="hero-image" role="img" aria-label="Amber fort in Rajasthan at sunset"></div>
+      <div class="hero-vignette"></div>
+      <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+      <div class="hero-content">
+        <div class="eyebrow reveal"><span></span> INDIA, THROUGH A ROYAL LENS</div>
+        <h1 class="hero-title reveal">Where every<br><em>journey</em> becomes<br>a <span>legend.</span></h1>
+        <p class="hero-copy reveal">From golden dunes to palaces floating on still waters — discover a land that stays with you long after you leave.</p>
+        <div class="hero-buttons reveal"><a class="button button-gold" href="#destinations">Explore Rajasthan <i data-lucide="arrow-up-right"></i></a><a class="text-link" href="#story"><span class="play-icon"><i data-lucide="play"></i></span> The Rajasthan story</a></div>
+      </div>
+      <div class="hero-bottom">
+        <div class="hero-index"><strong>01</strong><span>—</span><span>04</span><small>THE ROYAL COLLECTION</small></div>
+        <div class="hero-caption"><span class="caption-line"></span><span>Amber Fort · Jaipur, Rajasthan</span></div>
+        <a href="#destinations" class="scroll-cue"><span>SCROLL TO EXPLORE</span><i data-lucide="arrow-down"></i></a>
+      </div>
+      <div class="hero-side-label">27°00' N&nbsp; 75°52' E</div>
+    </section>
+
+    <section class="intro section-pad" id="story">
+      <div class="section-kicker"><span>01</span><span class="kicker-rule"></span><span>THE LAND OF KINGS</span></div>
+      <div class="intro-grid">
+        <h2 class="display-heading">A thousand years<br>of <em>wonder.</em></h2>
+        <div class="intro-text"><p>Rajasthan isn't just a place on a map. It's the hush of dawn over sandstone walls, the rhythm of folk music beneath a star-filled sky, and stories carved into every courtyard.</p><a href="#experiences" class="underlined-link">Find your kind of magic <i data-lucide="arrow-up-right"></i></a></div>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><strong>07</strong><span>UNESCO WORLD<br>HERITAGE SITES*</span></div>
+        <div class="stat"><strong>33</strong><span>DISTRICTS OF<br>DISCOVERY*</span></div>
+        <div class="stat"><strong>∞</strong><span>STORIES TO<br>TAKE HOME</span></div>
+        <p class="stat-note">*Illustrative travel copy. Verify current official counts before publication.</p>
+      </div>
+    </section>
+
+    <section class="destinations section-pad" id="destinations">
+      <div class="section-top">
+        <div><div class="section-kicker"><span>02</span><span class="kicker-rule"></span><span>THE PLACES</span></div><h2 class="display-heading">Find your <em>elsewhere.</em></h2></div>
+        <div class="section-top-note">Five destinations.<br>Endless ways to feel alive.</div>
+      </div>
+      <div class="filter-row" role="group" aria-label="Filter destinations">
+        <button class="filter active" data-filter="all">All places <span>05</span></button>
+        <button class="filter" data-filter="heritage">Heritage</button><button class="filter" data-filter="nature">Nature</button><button class="filter" data-filter="desert">Desert</button>
+      </div>
+      <div class="destination-grid">
+        <article class="destination-card card-large" data-category="heritage">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=1400&q=85" alt="Amber Fort, Jaipur, rising above the landscape">
+          <div class="card-shade"></div><div class="card-number">01 / HERITAGE</div><div class="card-content"><span>THE PINK CITY</span><h3>Jaipur</h3><p>Royal courtyards and rose-coloured streets.</p><a href="#planner" aria-label="Plan a trip to Jaipur"><i data-lucide="arrow-up-right"></i></a></div>
+        </article>
+        <article class="destination-card" data-category="heritage">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1602643163983-ed0babc39797?auto=format&fit=crop&w=1000&q=85" alt="Mehrangarh Fort and blue city of Jodhpur">
+          <div class="card-shade"></div><div class="card-number">02 / HERITAGE</div><div class="card-content"><span>THE BLUE CITY</span><h3>Jodhpur</h3><p>Indigo lanes beneath a mighty fort.</p><a href="#planner" aria-label="Plan a trip to Jodhpur"><i data-lucide="arrow-up-right"></i></a></div>
+        </article>
+        <article class="destination-card" data-category="nature">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=1000&q=85" alt="Lake and palace architecture in Udaipur">
+          <div class="card-shade"></div><div class="card-number">03 / NATURE</div><div class="card-content"><span>THE CITY OF LAKES</span><h3>Udaipur</h3><p>Quiet waters, white marble and slow days.</p><a href="#planner" aria-label="Plan a trip to Udaipur"><i data-lucide="arrow-up-right"></i></a></div>
+        </article>
+        <article class="destination-card" data-category="desert">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1000&q=85" alt="Golden sandstone architecture in Jaisalmer">
+          <div class="card-shade"></div><div class="card-number">04 / DESERT</div><div class="card-content"><span>THE GOLDEN CITY</span><h3>Jaisalmer</h3><p>Sandstone stories on an ocean of sand.</p><a href="#planner" aria-label="Plan a trip to Jaisalmer"><i data-lucide="arrow-up-right"></i></a></div>
+        </article>
+        <article class="destination-card" data-category="heritage">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1000&q=85" alt="Rajasthan temple architecture">
+          <div class="card-shade"></div><div class="card-number">05 / CULTURE</div><div class="card-content"><span>THE SACRED STOP</span><h3>Pushkar</h3><p>Sunrise rituals and a soulful old town.</p><a href="#planner" aria-label="Plan a trip to Pushkar"><i data-lucide="arrow-up-right"></i></a></div>
+        </article>
+      </div>
+      <p class="image-note">Photography loads from Unsplash. Image availability and licensing should be checked before commercial publication.</p>
+    </section>
+
+    <section class="fort-experience">
+      <div class="fort-photo"></div><div class="fort-overlay"></div>
+      <div class="fort-copy section-pad">
+        <div class="section-kicker light"><span>03</span><span class="kicker-rule"></span><span>STEP INTO ANOTHER WORLD</span></div>
+        <p class="fort-pretitle">THE FORT OF A THOUSAND STORIES</p>
+        <h2 class="display-heading">History has<br>a <em>heartbeat.</em></h2>
+        <p>Move around the miniature fort. Follow the light across its sandstone walls and imagine the stories held within.</p>
+        <div class="fort-controls"><button id="rotateToggle" class="button button-outline"><i data-lucide="rotate-3d"></i> <span>Pause 3D rotation</span></button><span class="drag-hint"><i data-lucide="mouse"></i> DRAG TO ROTATE</span></div>
+      </div>
+      <div class="three-wrap"><canvas id="fortCanvas" aria-label="Interactive 3D miniature sandstone fort" role="img"></canvas><div class="three-label"><span class="live-dot"></span> INTERACTIVE 3D SCENE <small>DRAG · ROTATE · EXPLORE</small></div><div class="three-fallback" id="threeFallback">Your browser may not support WebGL. Explore the photo gallery below.</div></div>
+    </section>
+
+    <section class="experiences section-pad" id="experiences">
+      <div class="section-top"><div><div class="section-kicker"><span>04</span><span class="kicker-rule"></span><span>FEEL THE PLACE</span></div><h2 class="display-heading">More than a <em>destination.</em></h2></div><p class="section-top-note">Come for the views.<br>Stay for the feeling.</p></div>
+      <div class="experience-grid">
+        <article class="experience-item exp-tall"><img loading="lazy" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1200&q=85" alt="Sunlit desert dunes"><div class="exp-overlay"></div><div class="exp-meta"><span>01 / OUTDOORS</span><i data-lucide="arrow-up-right"></i></div><h3>Desert<br>afterglow</h3><p>Chase the last light across the dunes.</p></article>
+        <article class="experience-item"><img loading="lazy" src="https://images.unsplash.com/photo-1504198322253-cfa87a0ff25f?auto=format&fit=crop&w=1000&q=85" alt="Traditional Indian folk dance performance"><div class="exp-overlay"></div><div class="exp-meta"><span>02 / CULTURE</span><i data-lucide="arrow-up-right"></i></div><h3>Rhythm of<br>Rajasthan</h3><p>Traditions that bring the night alive.</p></article>
+        <article class="experience-item"><img loading="lazy" src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1000&q=85" alt="Indian cuisine served with spices"><div class="exp-overlay"></div><div class="exp-meta"><span>03 / FLAVOUR</span><i data-lucide="arrow-up-right"></i></div><h3>A table<br>of stories</h3><p>Bold spices, slow recipes, generous hearts.</p></article>
+      </div>
+    </section>
+
+    <section class="planner section-pad" id="planner">
+      <div class="planner-bg"></div>
+      <div class="planner-content">
+        <div class="section-kicker light"><span>05</span><span class="kicker-rule"></span><span>YOUR JOURNEY, YOUR WAY</span></div>
+        <h2 class="display-heading">The next great<br>story is <em>yours.</em></h2>
+        <p>Build a first draft of your Rajasthan escape. No sign-up, just a little inspiration.</p>
+        <form class="planner-form" id="tripForm">
+          <label>Where would you like to go?
+            <select id="tripDestination"><option value="Jaipur">Jaipur — the Pink City</option><option value="Jodhpur">Jodhpur — the Blue City</option><option value="Udaipur">Udaipur — the City of Lakes</option><option value="Jaisalmer">Jaisalmer — the Golden City</option><option value="Rajasthan">A little bit of everything</option></select>
+          </label>
+          <div class="form-two"><label>Days to explore<select id="tripDays"><option value="2">2 days</option><option value="3" selected>3 days</option><option value="5">5 days</option><option value="7">7 days</option></select></label><label>Your travel mood<select id="tripMood"><option value="Culture & heritage">Culture & heritage</option><option value="Slow & scenic">Slow & scenic</option><option value="Adventure & desert">Adventure & desert</option><option value="Food & local life">Food & local life</option></select></label></div>
+          <button class="button button-gold" type="submit">Create my itinerary <i data-lucide="arrow-up-right"></i></button>
+        </form>
+        <div class="itinerary-result" id="itineraryResult" aria-live="polite"></div>
+      </div>
+      <div class="planner-art"><div class="planner-sun"></div><div class="planner-arch arch-a"></div><div class="planner-arch arch-b"></div><div class="planner-stamp">R<br><span>✦</span></div><p>THE ART OF<br>GETTING LOST</p></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#top"><span class="brand-mark"><i data-lucide="sun"></i></span><span><b>RAJASTHAN</b><small>A ROYAL JOURNEY</small></span></a>
+    <p>Made for the curious. Inspired by the extraordinary.</p><a class="back-top" href="#top">BACK TO TOP <i data-lucide="arrow-up"></i></a>
+    <div class="footer-bottom"><span>© 2026 RAJASTHAN JOURNEY CONCEPT</span><span>DESIGNED TO FEEL LIKE A STORY</span></div>
+  </footer>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
